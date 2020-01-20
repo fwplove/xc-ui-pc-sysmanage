@@ -42,9 +42,15 @@ export default {
       }
     };
   },
+
+//钩子函数 dom元素渲染完成后调用
+  mounted() {
+    this.query();
+  },
   methods: {
     //分页查询
     changePage: function() {
+      this.params.page = page;
       this.query();
     },
 
@@ -58,7 +64,6 @@ export default {
           this.list = res.queryResult.list;
         });
     }
-
   }
 };
 </script>
