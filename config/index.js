@@ -22,7 +22,7 @@ module.exports = {
       '/api/cms': {
         target: 'http://localhost:31001',
         pathRewrite: {
-          '^/api': ''
+          '^/api': ''//实际请求去掉/api
         }
         //target: 'http://127.0.0.1:50201'
       },
